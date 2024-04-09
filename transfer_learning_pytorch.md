@@ -27,7 +27,7 @@ jupyter lab transfer_learning_pytorch.ipynb
 ## Notebook Structure
 
 The notebook consists of several key sections, each dedicated to a step in the transfer learning process:
-1. Importing Libraries
+## 1. Importing Libraries
 
 This section includes importing necessary Python packages and PyTorch modules:
 
@@ -42,7 +42,7 @@ from torchvision import datasets, transforms, models
     torch.nn and torch.optim for building the model and setting up the optimizer.
     datasets, transforms, and models from torchvision for data loading/preprocessing and accessing pre-trained models.
 ```
-2. Data Preparation
+## 2. Data Preparation
 
 Details on preparing your dataset for training, including downloading, transforming, and loading data:
 
@@ -62,7 +62,7 @@ train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle
     ImageFolder for loading data assuming directory structure represents labels.
     DataLoader for batching, shuffling, and preparing data for training.
 ```
-3. Loading and Modifying the Pre-trained Model
+## 3. Loading and Modifying the Pre-trained Model
 
 Explains how to load a pre-trained model and modify it for a new task:
 
@@ -79,7 +79,7 @@ model.fc = nn.Linear(num_ftrs, num_classes)  # Replace the last layer
     Freezing the model parameters to reuse learned features without altering them.
     Modifying the final fully connected layer to match the number of classes in the new task.
 ```
-4. Model Training
+## 4. Model Training
 
 Covers setting up the loss function, optimizer, and the training loop:
 
@@ -100,7 +100,7 @@ for epoch in range(num_epochs):
     Using SGD optimizer for updating the model's final layer parameters.
     Iterating over epochs and batches, performing backpropagation and parameters update.
 ```
-5. Evaluation and Testing
+## 5. Evaluation and Testing
 
 Guides on evaluating the model's performance on a test dataset:
 
@@ -120,7 +120,7 @@ print(f'Accuracy: {100 * correct / total}%')
     Using torch.no_grad() to disable gradient calculation for evaluation.
     Calculating accuracy by comparing predictions with true labels.
 ```
-6. Conclusion and Next Steps
+## 6. Conclusion and Next Steps
 
 Suggestions for further exploration, such as trying different architectures, tuning hyperparameters, or applying more sophisticated data augmentation techniques.
 Running the Notebook
